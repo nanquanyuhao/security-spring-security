@@ -2,6 +2,7 @@ package net.nanquanyuhao.security.springmvc.init;
 
 import net.nanquanyuhao.security.springmvc.config.ApplicationConfig;
 import net.nanquanyuhao.security.springmvc.config.WebConfig;
+import net.nanquanyuhao.security.springmvc.config.WebSecurityConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
@@ -17,7 +18,7 @@ public class SpringApplicationInitializer extends AbstractAnnotationConfigDispat
      */
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{ApplicationConfig.class};
+        return new Class[]{ApplicationConfig.class, WebSecurityConfig.class};
     }
 
     /**
